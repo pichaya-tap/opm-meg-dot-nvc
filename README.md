@@ -7,13 +7,10 @@ This repository contains the official implementation of a symmetric fusion pipel
 We present a unified anatomical and functional framework that integrates electrophysiological and hemodynamic signals into a shared Schaefer 2018 parcellation space. By co-optimizing spatial and temporal filters, our framework significantly enhances functional contrast, yielding single-trial neurovascular responses with a median enhancement of 5.6 dB over conventional anatomical priors. This approach successfully localizes task-evoked functional hubs using a "pairwise positive" sign convention, providing a biologically plausible and interpretable map of the neurovascular unit [446, 447, History].
 
 ## Key Features
-
-    Unified Anatomical Modeling: Parallel paths for BEM (MEG via MNE-Python) and FEM (DOT via Cedalion/NIRFASTer) integrated into a subject-specific dual head model [482, History].
-    mSPoC Decomposition: Symmetric source separation that accounts for the non-linearity of the neural bandpower operator to extract latent NVC components.
-    Automated Sign Alignment: Implementation of a standardized sign convention to ensure MEG power drops (ERD) and hemodynamic rises (HbO) are represented as unified positive hubs on cortical maps [447, History].
+Unified Anatomical Modeling: Parallel paths for BEM (MEG via MNE-Python) and FEM (DOT via Cedalion/NIRFASTer) integrated into a subject-specific dual head model. 
+mSPoC Decomposition: Symmetric source separation that accounts for the non-linearity of the neural bandpower operator to extract latent NVC components.Automated Sign Alignment: Implementation of a standardized sign convention to ensure MEG power drops (ERD) and hemodynamic rises (HbO) are represented as unified positive hubs on cortical maps.
 
 Repository Structure
-
     notebooks/01_head_modeling.ipynb: Structural processing pipeline including Freesurfer/Miklody segmentation and 600-parcel anatomical integration.
     notebooks/02_source_reconstruction.ipynb: Sensor-to-source projection using dSPM (MEG) and image reconstruction (DOT).
     notebooks/03_mspoc_fusion.ipynb: Multimodal optimization, grid search for optimal NVC time lags (τ), and extraction of spatial patterns (A).
