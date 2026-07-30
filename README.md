@@ -7,27 +7,35 @@ This repository contains the official implementation of a symmetric fusion pipel
 We present a unified anatomical and functional framework that integrates electrophysiological and hemodynamic signals into a shared Schaefer 2018 parcellation space. By co-optimizing spatial and temporal filters, our framework significantly enhances functional contrast, yielding single-trial neurovascular responses with a median enhancement of 5.6 dB over conventional anatomical priors. This approach successfully localizes task-evoked functional hubs using a "pairwise positive" sign convention, providing a biologically plausible and interpretable map of the neurovascular unit.
 
 ## Key Features
-Unified Anatomical Modeling: Parallel paths for BEM (MEG via MNE-Python) and FEM (DOT via Cedalion/NIRFASTer) integrated into a subject-specific dual head model. 
-mSPoC Decomposition: Symmetric source separation that accounts for the non-linearity of the neural bandpower operator to extract latent NVC components.Automated Sign Alignment: Implementation of a standardized sign convention to ensure MEG power drops (ERD) and hemodynamic rises (HbO) are represented as unified positive hubs on cortical maps.
+* **Unified Anatomical Modeling:** Parallel paths for BEM (MEG via MNE-Python) and FEM (DOT via Cedalion/NIRFASTer) integrated into a subject-specific dual head model.
+* **mSPoC Decomposition:** Symmetric source separation that accounts for the non-linearity of the neural bandpower operator to extract latent NVC components.
+* **Sign Alignment:** Implementation of a sign convention to ensure MEG power drops (ERD) and hemodynamic rises (HbO) are represented as unified positive hubs on cortical maps.
 
-Repository Structure
-    notebooks/01_preprocess.ipynb: Structural processing pipeline including anatomical headmodel generation, source reconstruction using dSPM (MEG) and image reconstruction (DOT).
-    notebooks/02_mspoc.ipynb: Multimodal optimization, grid search for optimal NVC time lags (τ), and extraction of spatial patterns (A).
-    utils.py: Custom modules for mSPoC, visualization and SNR calculation
+## 📁 Repository Structure
+
+```text
+.
+├── notebooks/
+│   ├── 01_preprocess.ipynb          #  Structural processing pipeline including anatomical headmodel generation, source reconstruction │  │   │                               #  using dSPM (MEG) and image reconstruction (DOT).
+│   └── 02_mspoc.ipynb           # Multimodal optimization, grid search for optimal time lags (τ), and extraction of spatial patterns (A)
+├── utils.py                            # Custom modules for mSPoC, visualization and SNR calculation
+├── requirements.txt                    # Project package dependencies
+└── README.md                           # Project overview
+  
 
 ## Getting Started
 1. Installation
 Clone the repository and install the required dependencies (including Cedalion and MNE-Python):
 
-git clone https://github.com/your-username/opm-meg-dot-nvc.git
+git clone [https://github.com/your-username/opm-meg-dot-nvc.git](https://github.com/your-username/opm-meg-dot-nvc.git)
 cd opm-meg-dot-nvc
 pip install -r requirements.txt
 
 2. Usage
-The pipeline is designed to be executed sequentially through the provided Jupyter notebooks. Ensure your T1-weighted MRI data is organized according to BIDS standards for seamless integration with the head-modeling scripts.
+The pipeline is designed to be executed sequentially through the provided Jupyter notebooks. Ensure your T1-weighted MRI data is organized according for seamless integration with the head-modeling scripts.
 
  ## Citation
-If you use this framework in your research, please cite our forthcoming paper in Imaging Neuroscience:
+If you use this framework in your research, please cite our forthcoming paper:v
 [Full citation placeholder: e.g., "Multimodal Neuroimaging with OPMs: A Symmetric Fusion Approach..."]
 ## Acknowledgments
-This work utilizes the Cedalion toolbox for optical reconstruction and the MNE-Python ecosystem for electrophysiological analysis. Specialized tissue segmentation was performed using the MRIsegmentation pipeline
+This work utilizes the Cedalion toolbox for optical reconstruction and the MNE-Python ecosystem for electrophysiological analysis. Specialized tissue segmentation was performed using the MRIsegmentation pipeline.
