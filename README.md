@@ -23,7 +23,8 @@ We present a unified anatomical and functional framework that integrates electro
 └── README.md                    # Project overview
 ```
 ## Getting Started
-1. Installation
+### 1. Installation
+
 Clone the repository and install the required dependencies (including Cedalion and MNE-Python):
 ```bash
 git clone https://github.com/pichaya-tap/opm-meg-dot-nvc.git
@@ -32,7 +33,8 @@ cd opm-meg-dot-nvc
 
 pip install -r requirements.txt
 ```
-2. Usage
+### 2. Usage
+
 The pipeline is designed to be executed sequentially through the provided Jupyter notebooks. T1-weighted MRI data must be processed with Freesurfer and the Harmening/Miklody SPM12-based workflow seperately and organized for integration with the head-modeling scripts.
 
 ## Citation
