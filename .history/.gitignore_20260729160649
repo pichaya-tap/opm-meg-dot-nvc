@@ -1,0 +1,14 @@
+# Python / Jupyter temporary files
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+
+# Data & Output directories (host large files on OSF/Zenodo instead)
+data/*
+!data/.gitkeep
+output/*
+!output/.gitkeep
+*.nc
+*.fif
+*.joblib

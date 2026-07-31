@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software or methodology in your research, please cite it as below."
+title: "Data-driven multimodal fusion of OPM-MEG and DOT resolves individual neurovascular coupling at the single trial level during motor tasks"
+type: software
+authors:
+  - family-names: "Tappayuthpijarn"
+    given-names: "YourFirstName"
+    affiliation: "Physikalisch-Technische Bundesanstalt (PTB) & Technische Universität Berlin"
+    # repository-code: "https://github.com/your-username/opm-meg-dot-nvc"
+date-released: 2026-07-31
+version: "1.0.0"
+keywords:
+  - OPM-MEG
+  - fNIRS
+  - HD-DOT
+  - mSPoC
+  - Neurovascular Coupling
+  - Multimodal Imaging
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Tappayuthpijarn"
+      given-names: "YourFirstName"
+  title: "Evaluating task-evoked neurovascular coupling using integrated OPM-MEG and fNIRS imaging"
+  journal: "NeuroImage"
+  year: 2026
