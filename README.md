@@ -35,7 +35,7 @@ pip install -r requirements.txt
 ```
 ### 2. Usage
 
-The pipeline is designed to be executed sequentially through the provided Jupyter notebooks. T1-weighted MRI data must be processed with Freesurfer and the Harmening/Miklody SPM12-based workflow seperately and organized for integration with the head-modeling scripts.
+The pipeline is designed to be executed sequentially through the provided Jupyter notebooks. If required, T1-weighted MRI data must be processed with Freesurfer and the Harmening/Miklody SPM12-based workflow seperately and organized for integration with the head-modeling scripts.
 
 ## Citation
 If you use this framework in your research, please cite our forthcoming paper
