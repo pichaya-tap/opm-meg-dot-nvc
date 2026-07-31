@@ -16,26 +16,35 @@ We present a unified anatomical and functional framework that integrates electro
 ```text
 .
 ├── notebooks/
-│   ├── 01_preprocess.ipynb          #  Structural processing pipeline including anatomical headmodel generation, source reconstruction │  │   │                               #  using dSPM (MEG) and image reconstruction (DOT).
+│   ├── 01_preprocess.ipynb      #  Structural processing pipeline including anatomical headmodel generation, source reconstruction using dSPM (MEG) and image reconstruction (DOT).
 │   └── 02_mspoc.ipynb           # Multimodal optimization, grid search for optimal time lags (τ), and extraction of spatial patterns (A)
-├── utils.py                            # Custom modules for mSPoC, visualization and SNR calculation
-├── requirements.txt                    # Project package dependencies
-└── README.md                           # Project overview
-  
-
+├── utils.py                     # Custom modules for mSPoC, visualization and SNR calculation
+├── requirements.txt             # Project package dependencies
+└── README.md                    # Project overview
+```
 ## Getting Started
 1. Installation
 Clone the repository and install the required dependencies (including Cedalion and MNE-Python):
+```bash
+git clone https://github.com/pichaya-tap/opm-meg-dot-nvc.git
 
-git clone [https://github.com/your-username/opm-meg-dot-nvc.git](https://github.com/your-username/opm-meg-dot-nvc.git)
 cd opm-meg-dot-nvc
+
 pip install -r requirements.txt
-
+```
 2. Usage
-The pipeline is designed to be executed sequentially through the provided Jupyter notebooks. Ensure your T1-weighted MRI data is organized according for seamless integration with the head-modeling scripts.
+The pipeline is designed to be executed sequentially through the provided Jupyter notebooks. T1-weighted MRI data must be processed with Freesurfer and the Harmening/Miklody SPM12-based workflow seperately and organized for integration with the head-modeling scripts.
 
- ## Citation
-If you use this framework in your research, please cite our forthcoming paper:v
-[Full citation placeholder: e.g., "Multimodal Neuroimaging with OPMs: A Symmetric Fusion Approach..."]
-## Acknowledgments
-This work utilizes the Cedalion toolbox for optical reconstruction and the MNE-Python ecosystem for electrophysiological analysis. Specialized tissue segmentation was performed using the MRIsegmentation pipeline.
+## Citation
+If you use this framework in your research, please cite our forthcoming paper
+```bibtex
+@article{tappayuthpijarn2026mspoc,
+  title={Data-driven multimodal fusion of OPM-MEG and DOT resolves individual neurovascular coupling at the single trial level during motor tasks},
+  author={Tappayuthpijarn, Pichaya and Co-authors},
+  journal={Imaging Neuroscience},
+  year={2026}
+}
+```
+
+## 🤝 Acknowledgments
+This work utilizes the [Cedalion](https://github.com/Cedalion-fNIRS/cedalion) toolbox for fNIRS/DOT analysis and image reconstruction and the [MNE-Python](https://mne.tools/stable/index.html)  for electrophysiological analysis and source reconstruction. Specialized head tissue segmentation was performed using the [MRIsegmentation](https://doi.org/10.5281/zenodo.7357674) pipeline (Harmening & Miklody, 2022).
